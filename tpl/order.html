@@ -1,0 +1,43 @@
+
+<div class="container" id="order">
+    <form ng-hide="AddResult">
+        <!-- 用户名-->
+        <div class="form-group">
+            <label>用户名</label>
+            <input type="text"
+                   class="form-control"
+                   ng-model="order.user_name"
+                   placeholder="请输入用户名"/>
+        </div>
+
+        <!-- 联系电话-->
+        <div class="form-group">
+            <label>联系电话</label>
+            <input type="text"
+                   ng-model="order.phone"
+                   class="form-control"
+                   placeholder="请输入联系电话"/>
+        </div>
+        <!-- 住址-->
+        <div class="form-group">
+            <label>住址</label>
+      <textarea
+              ng-model="order.addr"
+              class="form-control">
+      </textarea>
+        </div>
+        <button
+                ng-click="submitOrder()"
+                class="btn btn-success btn-block">
+            立即购买
+        </button>
+    </form>
+
+
+    <!-- 显示下单后的结果-->
+    <div ng-show="AddResult">
+        {{AddResult}}
+        <a href="#/Main">返回首页</a>
+        <a href="#/MyOrder">查看订单</a>
+    </div>
+</div>

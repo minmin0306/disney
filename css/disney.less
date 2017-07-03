@@ -1,0 +1,222 @@
+//引入bootstrap.less
+@import "bootstrap.less";
+@txt-color:#333333;
+
+/*1、判断屏幕尺寸是否大于 1200*/
+@media screen and (min-width:1200px){
+    #main h2{
+      font-size:30px;
+    }
+  div.info h3{
+      font-size:24px;
+  }
+   h4{
+    font-size:20px;
+  }
+}
+/*2、判断屏幕尺寸是否 >992 并且 < 1199*/
+@media screen and (min-width:992px) and (max-width:1199px){
+  #main h2{
+    font-size:28px;
+  }
+  div.info h3{
+    font-size:22px;
+  }
+   h4{
+    font-size:18px;
+  }
+}
+/*3、屏幕尺寸是否 > 768 并且 < 991 时*/
+@media screen and (min-width:768px) and (max-width:991px){
+  #main h2{
+    font-size:25px;
+  }
+  div.info h3{
+    font-size:20px;
+  }
+   h4{
+    font-size:16px;
+  }
+}
+/*4、判断屏幕尺寸是否小于767*/
+@media screen and (max-width:767px){
+  #main h2{
+    font-size:20px;
+  }
+  div.info h3{
+    font-size:15px;
+  }
+   h4{
+    font-size:12px;
+  }
+}
+body{
+  padding-top:68px;
+  font-family:helvetica,"微软雅黑","microsoft yahei",Verdana, Lucida,arial,sans-serif,"黑体";
+}
+#order,#myOrder{
+  padding-top:68px;
+}
+//导航条
+#nav{
+  background-color:#fff;
+  a.navbar-brand{
+    width:185px;
+    height:68px;
+    padding:0;
+    background:url(../img/t_logo.png) no-repeat;
+  }
+
+}
+//主体内容
+div.row img{
+  margin:0 auto;
+}
+#main{
+h2{
+  margin:5% 0;
+}
+  //明星
+
+div.character a{
+  color:@txt-color;
+  text-decoration:none;
+}
+
+    div.character-img>div{
+      height:180px;
+
+    }
+  div.character img{
+    margin:0 auto;
+  }
+    div.character a:hover img{
+      width:165px;
+    }
+    div.character a:hover h4{
+      font-weight:bold;
+    }
+  //商品
+  div.shopping-detail img{
+    margin-top:4px;
+  }
+  div.shopping-detail{
+    border-bottom:1px solid #eee;
+    border-right:1px solid #eee;
+  }
+div.shopping-detail div{
+  padding-bottom:11%;
+  border-top:1px solid #eee;
+  border-left:1px solid #eee;
+}
+  div.shopping-detail div:hover{
+    box-shadow:2px 2px 2px 2px #D2D2D2;
+  }
+  //咨讯
+  div.info-main{
+    border:1px solid #eee;
+  }
+
+  div.info-main>div p{
+    height:40px;
+    line-height:20px;
+    overflow:hidden;
+    padding-bottom:152px;
+  }
+  @media screen and (max-width:767px)  {
+    div.info-main>div p{
+      padding-bottom:60px;
+    }
+  }
+  div.info-detail{
+    border-bottom:1px solid #eee;
+    border-right:1px solid #eee;
+  }
+  div.info-detail img{
+    margin-top:4px;
+  }
+  div.info-detail>div{
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+  }
+  div.info-detail>div:hover{
+    box-shadow:2px 2px 2px 2px #D2D2D2;
+  }
+  div.info-detail>div h4{
+    height:40px;
+    line-height:20px;
+    overflow:hidden;
+  }
+  div.info-detail>div p{
+    height:40px;
+    line-height:20px;
+    overflow:hidden;
+  }
+}
+//底部
+#footer{
+  div.container{
+    margin-top:5%;
+  }
+  div.row{
+    margin:1% 0;
+  }
+  div.about a{
+    color:@txt-color;
+    text-decoration:none;
+  }
+}
+//main
+#main{
+  @media screen and (min-width:1200px){
+    .banner-box{
+      height:400px;
+    }
+  }
+  @media screen and (min-width:992px) and (max-width:1199px){
+    .banner-box{
+      height:400px;
+    }
+  }
+  @media screen and (min-width:768px) and (max-width:991px){
+    .banner-box{
+      height:300px;
+    }
+  }
+  @media screen and (max-width:767px){
+    .banner-box{
+      height:130px;
+    }
+  }
+  *{padding:0;margin: 0;list-style:none;}
+  .banner-box{width:100%;margin:0 auto;position:relative;text-align:center;overflow: hidden;}
+  .banner-box .img{position:absolute;top:0;left:0;}
+  .banner-box .img li{float:left;}
+  //.banner-box .img li img{display: block; max-width: 100%; height: auto;}
+  .banner-box .li{width:100%;position:absolute;left:0;bottom:10px;}
+  .banner-box .li li{width:10px;height:10px;background:#ccc;border-radius:50%;display:inline-block;margin:0 3px;cursor:pointer;}
+  .banner-box .but{position: absolute;top:50%;margin-top:-30px;width:38px;height:60px;line-height:60px;text-align:center;font-size: 30px;background:rgba(0,0,0,0.5);color:#fff;font-family: '宋体';cursor:pointer;display: none;}
+  .banner-box:hover .but{display:block;}
+  .banner-box .but-left{left:0;}
+  .banner-box .but-right{right:0;}
+  .banner-box .li .index{background:#f60;width: 30px;border-radius:10px;}
+  .banner-box .bar{ position: absolute; left: 0; bottom: 0; height: 5px; background-color: hsla(24,100%,50%,0.5); }
+}
+//detail
+#detail{
+  div.row{
+    border:1px solid #eee;
+  }
+  div.row>div.txt{
+    padding:7% 0;
+  }
+}
+//个人订单
+#myOrder{
+  div.row{
+    border:1px solid #eee;
+  }
+  div.row>div.txt{
+    padding:9% 0;
+  }
+}

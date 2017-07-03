@@ -1,0 +1,85 @@
+<nav id="nav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <!--1.navbar-header-->
+            <a href="#/Main" class="navbar-brand" >
+
+            </a>
+            <!--1.2 navbar-toggle-->
+            <button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target="#myCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!--1.3导航-->
+        <div id="myCollapse" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right" id="nav-list">
+                <li class="active"><a href="#/Main"><i></i>首页</a></li>
+                <li><a href="#"><i></i>商店</a></li>
+                <li><a href="#"><i></i>乐园</a></li>
+                <li><a href="#"><i></i>影视</a></li>
+                <li><a href="#"><i></i>数码</a></li>
+                <li><a href="#"><i></i>迪士尼英语</a></li>
+                <li class="login">
+                    <a  href="" data-toggle="modal"  data-target="#Modal" data-whatever="@mdo">登录</a>
+                    <!--登录页面-->
+                    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title text-center" id="exampleModalLabel">登录页面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form >
+                                        <div class="form-group">
+                                            <label for="user-name" class="control-label">用户名:</label>
+                                            <input type="text" class="form-control" id="user-name" name="uname" ng-model="user_name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="user-pwd" class="control-label">密码:</label>
+                                            <input class="form-control" id="user-pwd" name="upwd" ng-model="user_pwd">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#registerModal" data-toggle="modal">注册</button>
+                                    <button type="button" ng-click="loginClick()" class="btn btn-primary" >登录</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--注册页面-->
+                    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title text-center" >注册页面</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form >
+                                        <div class="form-group">
+                                            <label for="user" class="control-label">用户名:</label>
+                                            <input type="text" class="form-control" id="user" name="uname" ng-model="user_name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pwd" class="control-label">密码:</label>
+                                            <input type="password" class="form-control" id="pwd" name="upwd" ng-model="user_pwd">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#Modal" data-toggle="modal">已有账号去登录</button>
+                                    <button type="button" class="btn btn-primary" ng-click="registerClick()">提交注册信息</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>

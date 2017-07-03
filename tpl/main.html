@@ -1,0 +1,92 @@
+
+<div id="main" class="container">
+    <!--2.1轮播-->
+    <div class='banner-box'>
+        <ul class='img'>
+            <li><img src="img/banner_01.jpg" class="img-responsive" alt="" /></li>
+            <li><img src="img/banner_02.jpg" class="img-responsive" alt="" /></li>
+            <li><img src="img/banner_03.jpg" class="img-responsive" alt="" /></li>
+        </ul>
+        <ul class='li'></ul>
+        <div class='but but-left'>&lt;</div>
+        <div class='but but-right'>&gt;</div>
+        <div class='bar'></div>
+    </div>
+    <!--2.2角色-->
+    <div class="character">
+        <!--1、标题文本-->
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-center "><b>明星</b></h2>
+            </div>
+        </div>
+        <div class="row character-img ">
+            <div class="col-md-2 col-xs-4" ng-repeat="star in starList">
+                <a href="" >
+                    <img ng-src="{{star.pic}}" class="img-responsive" alt="" width="114"/>
+                    <h4 class="text-center">{{star.title}}</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--2.3商店-->
+    <div class="shop">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-center "><b>商店</b></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-xs-12" ng-repeat="shopping in shoppingMain" ng-click="jump('/Detail')">
+                <!--图片-->
+                <img ng-src="{{shopping.pic}}" class="img-responsive">
+                <!--文本-->
+                <div class="img-title">
+
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="row shopping-detail">
+                    <div class=" col-xs-6" ng-repeat="shopping in shoppingList" ng-click="jump('/Detail')">
+                        <img ng-src="{{shopping.pic}}" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--2.4迪士尼咨讯-->
+    <div class="info">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-center "><b>迪士尼咨讯</b></h2>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-6 col-xs-12 info-main" ng-repeat="msg in msgMain">
+                <!--图片-->
+                <img ng-src="{{msg.pic}}" class="img-responsive">
+                <!--文本-->
+                <div class="img-title">
+                    <h4 class="text-center">{{msg.title}}</h4>
+                    <p>{{msg.content}}</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="row info-detail">
+
+                    <div class="col-xs-6" ng-repeat="msg in msgList">
+                        <!--图片-->
+                        <img ng-src="{{msg.pic}}" class="img-responsive">
+                        <!--文本-->
+                        <div class="img-title">
+                            <h4>{{msg.title}}</h4>
+                            <p>{{msg.content}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>

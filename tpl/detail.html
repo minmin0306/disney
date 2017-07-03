@@ -1,0 +1,14 @@
+
+<div class="container" id="detail">
+    <h2 class="text-center">迪士尼专题背包</h2>
+    <div class="row text-center " ng-repeat="shopping in shoppingList">
+        <div class="col-xs-3 " >
+            <img ng-src="{{shopping.pic}}" alt="" class="img-responsive"/>
+        </div>
+        <div class=" col-xs-3 txt" >商品名：{{shopping.pname}}</div>
+        <div class=" col-xs-3 txt" >价格：{{shopping.price}}</div>
+        <div class="col-xs-3 txt"><button type="button" class="btn btn-default btn-primary" ng-click="jump('/Order/'+shopping.pid)">立即购买</button></div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>

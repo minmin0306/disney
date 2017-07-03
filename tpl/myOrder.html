@@ -1,0 +1,26 @@
+
+<div class="container" id="myOrder">
+    <h1 class="text-center">个人订单</h1>
+    <div class="row text-center" >
+            <div class="col-xs-2">订单编号</div>
+            <div class="col-xs-4" >商品</div>
+            <div class="col-xs-4">下单时间</div>
+            <div class="col-xs-2">联系人</div>
+    </div>
+
+        <div class="row text-center" ng-repeat="order in orderList" >
+            <div class="col-xs-2 txt">{{order.oid}}</div>
+            <div class="col-xs-4">
+                <a href="#/Detail">
+                    <img ng-src="{{order.pic}}" class="img-responsive"
+                         alt=""/>
+                </a>
+            </div>
+            <div class="col-xs-4 txt">{{order.order_time|date:'yy-MM-dd hh:mm'}}</div>
+            <div class="col-xs-2 txt">{{order.user_name}}</div>
+        </div>
+
+
+
+</div>
+
